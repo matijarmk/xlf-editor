@@ -1,0 +1,108 @@
+@import '~bootstrap/scss/functions';
+@import '~bootstrap/scss/variables';
+@import '~bootstrap/scss/mixins';
+
+// Color system
+
+$blue: #005dc0de;
+$green: #359b3a;
+$epic: #007c92;
+$legendary: #fcb131;
+
+$primary: $blue;
+$success: $green;
+
+// stylelint-disable-next-line scss/dollar-variable-default
+$theme-colors: map-merge(
+  $theme-colors,
+  (
+    'primary': $primary,
+    'success': $success,
+    'epic': $epic,
+    'legendary': $legendary
+  )
+);
+
+// Options
+//
+// Quickly modify global styling by enabling or disabling optional features.
+
+$enable-shadows: true;
+$enable-pointer-cursor-for-buttons: true;
+$enable-responsive-font-sizes: true;
+
+// Spacing
+//
+// Control the default styling of most Bootstrap elements by modifying these
+// variables. Mostly focused on spacing.
+// You can add more entries to the $spacers map, should you need more variation.
+
+$spacers: map-merge(
+  (
+    'neg7': (
+      $spacer * -12
+    ),
+    'neg6': (
+      $spacer * -6
+    ),
+    'neg5': (
+      $spacer * -3
+    ),
+    'neg4': (
+      $spacer * -1.5
+    ),
+    'neg3': -$spacer,
+    'neg2': (
+      $spacer * -0.5
+    ),
+    'neg1': (
+      $spacer * -0.25
+    ),
+    6: (
+      $spacer * 6
+    ),
+    7: (
+      $spacer * 12
+    )
+  ),
+  $spacers
+);
+
+// stylelint-disable-next-line scss/dollar-variable-default
+
+$sizes: map-merge(
+  (
+    0: 0%,
+    5: 5%,
+    10: 10%,
+    15: 15%,
+    35: 35%
+  ),
+  $sizes
+);
+
+// Body
+//
+// Settings for the `<body>` element.
+
+$body-bg: $gray-200;
+
+// Typography
+//
+// Font, line-height, and color for body text, headings, and more.
+
+// stylelint-disable value-keyword-case
+$font-family-sans-serif: -apple-system, BlinkMacSystemFont, Roboto, 'Helvetica Neue', sans-serif, Arial, 'Segoe UI',
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+
+// Navbar
+// Compute the navbar-brand padding-y so the navbar-brand will have the same height as navbar-text and nav-link
+$navbar-dark-color: color-yiq($epic);
+$navbar-dark-hover-color: color-yiq($epic);
+$navbar-dark-active-color: color-yiq($epic);
+$navbar-dark-disabled-color: rgba(color-yiq($epic), 0.25);
+
+// Modals
+
+// Margin between elements in footer, must be lower than or equal to 2 * $modal-inner-padding
+$modal-lg: 1025px;

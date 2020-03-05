@@ -1,0 +1,14 @@
+@import '../bootstrap/variables.scss';
+
+.page-break-after-always {
+  page-break-after: always;
+}
+
+.label-required {
+  &::after {
+    content: ' *';
+    color: $danger;
+  }
+}
+
+
